@@ -1,0 +1,71 @@
+p {
+    font-family: Garamond, serif;
+    margin: 20px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.row-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.rows-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    background-color: #ecdddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container img,
+.video-container video{
+    
+    margin: 10px 0;
+    max-width: 230px;
+    height: auto;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #262a31;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ccc;
+}

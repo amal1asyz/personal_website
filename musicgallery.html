@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body style="background-image: url('jpg/bg pic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"></body>  
+    <title>Music Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .song-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .song-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .song-title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+      /* Back Button Styling */
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #262a31;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .back-button:hover {
+        background-color: #ccc;
+        transform: scale(1.05);
+    }
+    </style> 
+</head>
+
+<body>
+    
+        <!-- Back Button -->
+        <a href="gallery.html" class="back-button">← Back</a>
+        
+    <h1>My Top 3 Music</h1>
+    <div class="gallery">
+        <!-- Song 1 -->
+        <div class="song-card">
+            <img src="jpg/zayn.jpg" alt="Song 1 Cover">
+            <p class="song-title">Stardust - ZAYN </p>
+            <audio controls>a
+                <source src="audio/stardust.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <!-- Song 2 -->
+        <div class="song-card">
+            <img src="jpg/replay.jpg" alt="Song 2 Cover">
+            <p class="song-title">Replay - I'MIN</p>
+            <audio controls>
+                <source src="audio/replay.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <!-- Song 3 -->
+        <div class="song-card">
+            <img src="jpg/twice.jpg" alt="Song 3 cover">
+            <p class="song-title"> Basics - TWICE </p>
+            <audio controls>
+                <source src="audio/twice.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html> 

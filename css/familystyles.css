@@ -1,0 +1,93 @@
+/* Global Styles */
+body {
+  font-family: Garamond, serif;
+  margin: 20px;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between rows */
+}
+
+.gallery-row {
+  display: grid;
+  gap: 15px;
+}
+
+.gallery-row:first-child {
+  grid-template-columns: repeat(3, 1fr); /* First row: 3 columns */
+}
+
+.gallery-row:nth-child(2) {
+  grid-template-columns: repeat(4, 1fr); /* Second row: 4 columns */
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Description Styles */
+.description {
+  padding: 10px;
+}
+
+.description h3 {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.description p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Back Button styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #262a31;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+}

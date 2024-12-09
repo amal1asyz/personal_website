@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body style="background-image: url('jpg/bg pic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"></body>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <style>
+        /* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    border-radius: px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Add hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    overflow: auto; /* Enable scrolling if needed */
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+      /* Back Button Styling */
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #262a31;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .back-button:hover {
+        background-color: #ccc;
+        transform: scale(1.05);
+    }
+
+</style>
+
+    <!-- Back button -->
+    <a href="gallery.html" class="back-button">← Back</a>
+
+    <style> h1 {text-align: center;}</style>
+    <h1>My Beloved Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery2.jpg" alt="Image 1" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery4.jpg" alt="Image 2" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery5.jpg" alt="Image 3" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery6.jpg" alt="Image 4" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery3.jpg" alt="Image 5" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery7.jpg" alt="Image 6" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery8.jpg" alt="Image 7" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="jpg/belovedgallery9.jpg" alt="Image 8" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- Modal for full screen image -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-image" class="modal-content" src="" alt="Full Screen Image">
+        <span class="close-btn">&times;</span>
+    </div>
+
+    <script>
+        // Function to open the modal with the clicked image
+        function openModal(imageElement) {
+            var modal = document.getElementById("modal");
+            var modalImage = document.getElementById("modal-image");
+            modal.style.display = "block";
+            modalImage.src = imageElement.src;
+        }
+
+        // Function to close the modal when clicked
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+
+        <!-- Background Music -->
+        <audio autoplay loop>
+            <source src="audio/bg_music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+</body>
+</html>
